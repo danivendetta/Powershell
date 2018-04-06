@@ -4,7 +4,7 @@
 # Date: 06/04/2018
 # Sometimes the URL is only accesible from intranet or localhost, so this script is util in this cases to check with nagios.
 $url= "YOUR URL GOES HERE"
-$responseTime = Measure-Command { $response=Invoke-WebRequest $url -UseDefaultCredentials}
+$responseTime = Measure-Command { $response=Invoke-WebRequest $url -UseDefaultCredentials -UseBasicParsing}
 
 $milliseconds = $responseTime.Milliseconds
 
